@@ -1,0 +1,48 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.table-view{
+	-fx-background-color:transparent;
+}
+
+.table-view:focused{
+	-fx-background-color:transparent;
+}
+
+.table-view .column-header-background{
+	-fx-background-color:#00CED1 /*linear-gradient(#489ECE 0%, #48D1CC 100%) */;
+}
+
+.table-view .column-header-background .label{
+	-fx-background-color:transparent;
+	-fx-text-fill:#32343f;
+}
+
+.table-view .column-header{
+	-fx-background-color:transparent;
+}
+
+.table-view .column-header{
+	-fx-background-color:transparent;
+}
+
+.table-view .table-cell{
+	-fx-text-fill:#32343f;
+}
+
+.table-row-cell{
+	-fx-background-color:-fx-table-cell-color, #AFEEEE;
+	-fx-background-insets:0,0 0 1 0;
+	-fx-padding:0.0em;
+}
+
+.table-row-cell:odd{
+	-fx-background-color:table-cell-border-color, #480D1CC;
+}
+
+.table-view-cell-:selected{
+	fx-background-insets:#fff8DC;
+	-fx-background-insets:0;
+	fx-background-radius:1;
+}
+
+

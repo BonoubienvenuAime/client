@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="408.0" prefWidth="678.0" text="Liste des retards" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.client.controlleur.RetardControlleur">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+         <children>
+            <TableView fx:id="eleveTableRetard" layoutX="161.0" layoutY="43.0" prefHeight="373.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="matricule" prefWidth="87.99999845027924" text="Matricule" />
+                <TableColumn fx:id="nom" prefWidth="76.00000762939453" text="Nom" />
+                  <TableColumn fx:id="prenom" prefWidth="89.0" text="Prenom" />
+                  <TableColumn fx:id="classe" prefWidth="75.0" text="Classe" />
+                  <TableColumn fx:id="paye" prefWidth="150.0" text="Montant Paye" />
+                  <TableColumn fx:id="total" prefWidth="180.99996948242188" text="Scolarite" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children></AnchorPane>
+  </content>
+</TitledPane>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="559.0" prefWidth="872.0" stylesheets="@../theme.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.controlleur.FenetrePrincipaleControlleur">
+   <top>
+      <VBox prefHeight="112.0" prefWidth="872.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Quitter">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../image/iconfinder_Stop_40158.png" />
+                                 </image></ImageView>
+                           </graphic></MenuItem>
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../image/iconfinder_Help_1493288.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #326690;">
+               <left>
+                  <ImageView fitHeight="87.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../../../image/iconfinder_graduation-cap_1608377.png" />
+                     </image>
+                  </ImageView>
+               </left>
+               <center>
+                  <Text fill="#0d126f" strokeType="OUTSIDE" strokeWidth="0.0" text="GESTION DE SCOLARITE" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="53.0" />
+                     </font>
+                  </Text>
+               </center>
+            </BorderPane>
+         </children>
+      </VBox>
+   </top>
+   <left>
+      <Accordion BorderPane.alignment="CENTER">
+        <panes>
+          <TitledPane animated="false" text="Eleve">
+            <content>
+                  <BorderPane>
+                     <center>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutX="32.0" layoutY="7.0" prefHeight="348.0" prefWidth="201.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <HBox prefHeight="45.0" prefWidth="201.0">
+                                       <children>
+                                          <ImageView fitHeight="21.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../image/iconfinder_icon-111-search_314689.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Hyperlink onAction="#handleRechercher" text="Rechercher un eleve" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="49.0" prefWidth="201.0">
+                                       <children>
+                                          <ImageView fitHeight="23.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../image/iconfinder_10_Menu_List_Text_Line_Item_Bullet_Paragraph_2142684.png" />
+                                             </image></ImageView>
+                                          <Hyperlink onAction="#handleListe" text="Liste des eleves" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="46.0" prefWidth="201.0">
+                                       <children>
+                                          <ImageView fitHeight="30.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../image/iconfinder_JD-27_2246843.png" />
+                                             </image></ImageView>
+                                          <Hyperlink onAction="#handleAjouterEleve" text="Ajouter un eleve" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </center>
+                  </BorderPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="Scolarite">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Hyperlink layoutX="47.0" layoutY="14.0" onAction="#handleListeRetard" text="  Liste des retards" />
+                        <Hyperlink layoutX="22.0" layoutY="48.0" onAction="#handlePayer" text="Payer la scolarite" />
+                        <Hyperlink layoutX="22.0" layoutY="90.0" text="Creer les montants" />
+                        <Hyperlink layoutX="22.0" layoutY="132.0" text="Modifier un montant" />
+                        <ImageView fitHeight="21.0" fitWidth="28.0" layoutX="25.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/iconfinder_10_Menu_List_Text_Line_Item_Bullet_Paragraph_2142684.png" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="Intendant">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Hyperlink layoutX="14.0" layoutY="20.0" text="Information" />
+                        <Hyperlink layoutX="21.0" layoutY="52.0" prefHeight="24.0" prefWidth="168.0" text="Modifier l'utilisateur" />
+                     </children></AnchorPane>
+            </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+   </left>
+</BorderPane>
